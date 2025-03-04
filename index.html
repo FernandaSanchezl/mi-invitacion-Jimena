@@ -3,16 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Te Invito a Mi Cumpleaños!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Invitación de Cumpleaños 🎉</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <h1>🎉 ¡Estás Invitado! 🎉</h1>
-        <p>Ven a celebrar mi cumpleaños el <strong>15 de marzo</strong> a las <strong>7:00 PM</strong></p>
-        <p>📍 Lugar: Mi casa (te paso la dirección por privado)</p>
-        <p>Confirma tu asistencia:</p>
-        <a href="https://wa.me/1234567890?text=¡Voy a tu cumple!" class="boton">Confirmar en WhatsApp</a>
-    </div>
+        <h1>¡Estás Invitado!</h1>
+        <p>Te espero el <strong>4 de mayo</strong> a las <strong>4:00 PM</strong></p>
+        <h2>Ubicación del Cumpleaños</h2>
+        <p>Lugar: Mi casa</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.758433115864!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b608c6d6b%3A0x25d0c3e6d65a30d2!2sZ%C3%B3calo!5e0!3m2!1ses-419!2smx!4v1617573204100!5m2!1ses-419!2smx" 
+            width="300" 
+            height="200" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+
+        <!-- Imagen con rotación al hacer clic -->
+        <img src="torta.png" alt="Torta de cumpleaños" class="rotar-click">
+
+        <!-- Imagen con rotación automática -->
+        <img src="imagenes/circulo.png" alt="Globos" class="rotar-auto">
+
+
+        <div class="container">
+
+            <p></p>Fecha: <strong>4 de mayo a las 4:00 PM</strong></p>
+            <div id="contador">
+                <span id="dias"></span> días, 
+                <span id="horas"></span> horas, 
+                <span id="minutos"></span> minutos, 
+                <span id="segundos"></span> segundos
+            </div>
+        </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
