@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
     text-align: center;
     background-color: #f7e4f2;
     margin: 0;
@@ -24,6 +26,38 @@ h1 {
 .boton:hover {
     background-color: #ff1493;
 }
+
+#contador {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff4e513d, #fc913a41);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+}
+
+#contador span {
+    display: inline-block;
+    min-width: 50px;
+    padding: 10px;
+    background: rgba(202, 12, 12, 0.2);
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+#contador span::after {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
 
 /* Rotación automática */
 @keyframes rotar {
