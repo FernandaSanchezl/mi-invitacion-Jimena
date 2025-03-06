@@ -36,3 +36,38 @@ setInterval(actualizarContador, 1000);
 
 // Llamar una vez al cargar la página
 actualizarContador();
+
+let confettiInterval; 
+
+        function createConfetti() {
+            const confettiContainer = document.createDocumentFragment();
+            const colors = ['#ff0', '#ff4500', '#32cd32', '#00ced1', '#ff1493', '#1e90ff'];
+    
+            for (let i = 0; i < 50; i++) { 
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                document.body.appendChild(confetti);
+    
+                const size = Math.random() * 12 + 8;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.top = `-10px`;
+                confetti.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                confetti.style.animationDelay = `${Math.random()}s`;
+    
+                confettiContainer.appendChild(confetti);
+
+                setTimeout(() => confetti.remove(), 6000);
+            }
+    
+            document.body.appendChild(confettiContainer);
+        }
+    
+        confettiInterval = setInterval(createConfetti, 1000);
+
+        setTimeout(() => {
+            clearInterval(confettiInterval); 
+        }, 8000);
