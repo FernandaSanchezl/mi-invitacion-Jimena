@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
 
-
-  
-
 body {
     font-family: "Urbanist", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; /* O el peso que necesites */
+    font-weight: 400; 
     font-style: normal;
     text-align: center;
     background-color: #77779D;
+    font-size: 1.5rem;
     margin: 0;
     padding: 0;
     color: #ffffff;
-    overflow: hidden;
 }
 .container {
     padding: 20px;
@@ -36,35 +33,44 @@ h1 {
 }
 
 .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: red;
-            opacity: 0.8;
-            border-radius: 50%;
-            animation: fall linear infinite;
-        }
-
-#contador {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(45deg, #ff4e513d, #fc913a41);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall linear infinite;
 }
 
-#contador span {
-    display: inline-block;
-    min-width: 50px;
-    padding: 10px;
-    background: rgba(202, 12, 12, 0.2);
-    border-radius: 5px;
-    margin: 0 5px;
+.recorte {
+    width: 200px; /* Ajusta el tamaño que quieres mostrar */
+    height: 200px;
+    overflow: hidden; /* Oculta la parte de la imagen que sobresale */
+    position: relative;
+    }
+    
+    .recorte img {
+    position: absolute;
+    top: -50px; 
+    left: -50px;
+    }
+          
+
+.imag-flower-1{
+    width: 100%;
+    height: auto;
+    opacity: 70%;
+    transform: rotate(-20deg);
+    transform: scaleX(-1);
+}
+
+#contador {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #fff;
 }
 
 #contador span::after {
@@ -77,14 +83,8 @@ h1 {
 }
 
 @keyframes fall {
-            to {
-                transform: translateY(100vh) rotate(720deg);
-                opacity: 0;
-            }
-        }
-
-/* Rotación automática */
-@keyframes rotar {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
 }
