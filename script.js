@@ -41,7 +41,7 @@ let confettiInterval;
 
         function createConfetti() {
             const confettiContainer = document.createDocumentFragment();
-            const colors = ['#ff0', '#ff4500', '#32cd32', '#00ced1', '#ff1493', '#1e90ff'];
+            const colors = ['#ffa8ff', ' #de84dd', ' #bc60bc', ' #9b3c9a', '#7a1879 ', '#bc60bc'];
     
             for (let i = 0; i < 50; i++) { 
                 const confetti = document.createElement('div');

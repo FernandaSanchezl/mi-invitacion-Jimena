@@ -1,34 +1,31 @@
-@keyframes cambiarColor {
-    0% { background: #ff4e50; }
-    25% { background: #fc913a; }
-    50% { background: #f9d423; }
-    75% { background: #3b8d99; }
-    100% { background: #ff4e50; }
-}
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+
+  
 
 body {
-    font-family: "Marcellus", serif;
-    font-weight: 400;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* O el peso que necesites */
     font-style: normal;
     text-align: center;
-    background-color: #f7e4f2;
+    background-color: #77779D;
     margin: 0;
     padding: 0;
-    animation: cambiarColor 10s infinite alternate;
-    transition: background 1s ease-in-out;
+    color: #ffffff;
     overflow: hidden;
 }
 .container {
     padding: 20px;
 }
 h1 {
-    font-size: 2rem;
-    color: #ff69b4;
+    font-size: 6rem;
+    color: #ffffff;
 }
 .boton {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #ff69b4;
+    background-color: #ff69b400;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -90,15 +87,4 @@ h1 {
 @keyframes rotar {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-}
-.rotar-auto {
-    width: 150px;
-    animation: rotar 3s linear infinite;
-}
-
-/* Rotación al hacer clic */
-.rotar-click {
-    width: 150px;
-    transition: transform 0.5s ease-in-out;
-    cursor: pointer;
 }
