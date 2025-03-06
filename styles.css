@@ -16,6 +16,7 @@ body {
     padding: 0;
     animation: cambiarColor 10s infinite alternate;
     transition: background 1s ease-in-out;
+    overflow: hidden;
 }
 .container {
     padding: 20px;
@@ -36,6 +37,16 @@ h1 {
 .boton:hover {
     background-color: #ff1493;
 }
+
+.confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
 
 #contador {
     font-family: 'Arial', sans-serif;
@@ -68,6 +79,12 @@ h1 {
     text-transform: uppercase;
 }
 
+@keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
 
 /* Rotación automática */
 @keyframes rotar {
