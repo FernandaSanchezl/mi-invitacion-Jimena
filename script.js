@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Función para actualizar el contador
 function actualizarContador() {
-    const fechaObjetivo = new Date("May 4, 2025 12:43:00").getTime();
+    const fechaObjetivo = new Date("Mayo 4, 2025 12:43:00").getTime();
     const ahora = new Date().getTime();
     const diferencia = fechaObjetivo - ahora;
 
