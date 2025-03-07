@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Urbanist", sans-serif;
@@ -8,10 +13,24 @@ body {
     text-align: center;
     background-color: #77779D;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     color: #ffffff;
 }
+
+.invitacion {
+    width: 100%;
+    max-width: 450px;
+    background: #77779D;
+    border-radius: .1px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
 .container {
     padding: 20px;
 }
@@ -38,23 +57,24 @@ h1 {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: rgb(140, 0, 255);
     opacity: 0.8;
     border-radius: 50%;
     animation: fall linear infinite;
 }
 
 .imag-flower-1{
-    width: 80%;
+    width: 90%;
     opacity: 90%;
-    transform: rotate(30deg) scaleX(-1) translateX(-10rem);
+    transform: rotate(25deg) scaleX(-1) translateX(-9rem);
     z-index: 2;
 }
 
 .imag-flower-2{
-    width: 80%;
+    width: 90%;
     opacity: 70%;
-    transform: rotate(3deg) scaleX(-1) translateX(10rem);
+    transform: rotate(deg) scaleX(-1) translateX(-10rem);
+    margin-left: -10rem;
     z-index: 2;
 }
 
