@@ -104,6 +104,10 @@ h1 {
     z-index: 100;
     pointer-events: none;
 }
+#map {
+    height: 500px;
+    width: 100%;
+}
 
 @keyframes fall {
     to {

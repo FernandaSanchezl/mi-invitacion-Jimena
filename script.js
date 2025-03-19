@@ -3,12 +3,12 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 import { gsap } from 'https://cdn.skypack.dev/gsap';
 
 const camera = new THREE.PerspectiveCamera(
-    10,
+    3,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
 );
-camera.position.z = 13;
+camera.position.z = 10;
 
 const scene = new THREE.Scene();
 let bee;
@@ -48,22 +48,22 @@ reRender3D();
 
 let arrPositionModel = [
     {
-        id: 'banner',
-        position: {x: 0, y: -1, z: 0},
-        rotation: {x: 0, y: 1.5, z: 0}
+        id: "w",
+        position: {x: 0, y: 2, z: 3},
+        rotation: { x: Math.PI / 2, y: Math.PI / 40, z: 0 }
     },
     {
-        id: "intro",
+        id: "e",
         position: { x: 1, y: -1, z: -5 },
         rotation: { x: 0.5, y: -0.5, z: 0 },
     },
     {
-        id: "description",
+        id: "r",
         position: { x: -1, y: -1, z: -5 },
         rotation: { x: 0, y: 0.5, z: 0 },
     },
     {
-        id: "contact",
+        id: "t",
         position: { x: 0.8, y: -1, z: 0 },
         rotation: { x: 0.3, y: -0.5, z: 0 },
     },
@@ -121,7 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Función para actualizar el contador
 function actualizarContador() {
     const fechaObjetivo = new Date("Mayo 4, 2025 12:43:00").getTime();
     const ahora = new Date().getTime();
@@ -182,3 +181,5 @@ let confettiInterval;
         setTimeout(() => {
             clearInterval(confettiInterval); 
         }, 8000);
+
+        
