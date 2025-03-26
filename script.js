@@ -5,7 +5,7 @@ import { gsap } from 'https://cdn.skypack.dev/gsap';
 
 
 function actualizarContador() {
-    const fechaObjetivo = new Date("Mayo 4, 2025 2:00:00").getTime();
+    const fechaObjetivo = new Date("May 4, 2025 14:00:00").getTime();
     const ahora = new Date().getTime();
     const diferencia = fechaObjetivo - ahora;
 
@@ -44,8 +44,8 @@ function createConfetti() {
         confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
     }
 }
-
 createConfetti();
 setTimeout(() => {
-    document.body.innerHTML = "";
+    let confettiElements = document.querySelectorAll(".confetti");
+    confettiElements.forEach(el => el.parentNode.removeChild(el));
 }, 10000);
