@@ -29,13 +29,21 @@ setInterval(actualizarContador, 1000);
 
 // Llamar una vez al cargar la página
 actualizarContador();
+function getRandomColor() {
+    const colors = ['#761274', '#892586', '#9c3998', '#ae4caa', '#c15fbc', 'rgba(117, 0, 130, 0.77)'];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+
 
 function createConfetti() {
     for (let i = 0; i < 100; i++) {
         let confetti = document.createElement("div");
         confetti.classList.add("confetti");
         document.body.appendChild(confetti);
-        
+        document.querySelectorAll('.confetti').forEach(confetti => {
+            confetti.style.backgroundColor = getRandomColor();
+        });
         let size = Math.random() * 10 + 5;
         confetti.style.width = `${size}px`;
         confetti.style.height = `${size}px`;
