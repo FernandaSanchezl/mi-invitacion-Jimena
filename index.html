@@ -6,11 +6,13 @@
     <title>Mi Cumpleaños Jimena  🎉</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
+    
     <section></section>
     <div class="invitacion">
+        
         <img  class="imag-flower-1" src="imagenes/flor.webp" alt="flor">
         <div class="container">
             <h1 style="margin-bottom: 2rem; margin-top: -7rem;">Mi Cumpleaños Jimena</h1>
@@ -47,12 +49,28 @@
     <div  id="container3D">
     
     </div>
-    </div>  
+    </div> 
+
+    <model-viewer
+        src="fairy.glb"
+        autoplay
+        animation-name="animacion1"
+        camera-controls
+        style="width: 60px; height: 350px; transform: translateX(20px); z-index: -5;"
+    ></model-viewer>
+    <model-viewer
+    src="fairy.glb"
+    autoplay
+    animation-name="animacion2"
+    camera-controls
+    style="width: 60px; height: 200px; transform: translateX(200px); margin-top: -20rem;"
+></model-viewer>
 
     <footer>
-        <p style="font-size: 13px;">© 2025 Hecho por Fum Company</p>
+        <p style="font-size: 13px; margin-top: 3rem;">© 2025 Hecho por Fum Company</p>
     </footer>
     
+
 
     <script src="script.js" type="module"></script>
 
