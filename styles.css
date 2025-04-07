@@ -117,6 +117,13 @@ canvas{
     }
 }
 
+@media (max-width:360px) {
+    canvas{
+        margin-top: -64rem;
+        margin-left: -1rem;
+    }
+}
+
 @media (max-width: 340px){
     .maps{
         align-items: center;
