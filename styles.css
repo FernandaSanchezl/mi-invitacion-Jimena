@@ -117,6 +117,14 @@ canvas{
     }
 }
 
+@media (max-width:400px) {
+    canvas{
+        margin-top: -66rem;
+        margin-left: -1rem;
+    }
+}
+
+
 @media (max-width:360px) {
     canvas{
         margin-top: -64rem;
