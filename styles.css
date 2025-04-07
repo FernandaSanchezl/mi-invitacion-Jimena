@@ -117,6 +117,20 @@ canvas{
     }
 }
 
+@media (max-width:412px) {
+    canvas{
+        margin-top: -75rem;
+        margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:10rem;
+    }
+}
+
 @media (max-width:400px) {
     canvas{
         margin-top: -66rem;
@@ -124,11 +138,31 @@ canvas{
     }
 }
 
-
-@media (max-width:360px) {
+@media (max-width:375px) {
     canvas{
         margin-top: -64rem;
         margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:30rem;
+    }
+}
+
+@media (max-width:360px) {
+    canvas{
+        margin-top: -70rem;
+        margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:30rem;
     }
 }
 
@@ -136,6 +170,20 @@ canvas{
     .maps{
         align-items: center;
         margin-left: -2rem;
+    }
+}
+
+@media (max-width:344px) {
+    canvas{
+        margin-top: -64rem;
+        margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:20rem;
     }
 }
 
