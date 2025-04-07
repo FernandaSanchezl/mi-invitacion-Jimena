@@ -31,6 +31,13 @@ body {
     transform: translate(-50%, -50%);
 }
 
+canvas{
+    height: 330rem;
+    margin-top: -70rem;
+    margin-left: -30rem;
+    z-index: -100;
+}
+
 .container {
     padding: 50px;
 }
@@ -53,7 +60,7 @@ body {
     opacity: 90%;
     transform: rotate(25deg) scaleX(-1) translateX(-9rem);
     z-index: 2;
-    margin-top: 4rem;
+    margin-top: -2rem;
 }
 
 .imag-flower-2{
