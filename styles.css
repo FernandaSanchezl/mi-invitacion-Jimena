@@ -41,7 +41,20 @@ canvas{
     margin-left: -1rem;
 }
 
+.animacion-1{
+    width: 60px; 
+    height: 350px; 
+    transform: translateX(20px); 
+    z-index: -5;
+    margin-top: -10rem;
+}
 
+.animacion-2{
+    width: 60px; 
+    height: 200px; 
+    transform: translateX(200px); 
+    margin-top: -20rem;
+}
 
 .confetti {
     position: absolute;
@@ -129,6 +142,12 @@ canvas{
         z-index: 2;
         margin-top:10rem;
     }
+    .animacion-1{
+        margin-top: -9rem;
+    }
+    .animacion-2{
+        margin-top: -20rem;
+    }
 }
 
 @media (max-width:400px) {
@@ -140,7 +159,7 @@ canvas{
 
 @media (max-width:375px) {
     canvas{
-        margin-top: -64rem;
+        margin-top: -67rem;
         margin-left: -1rem;
     }
     .imag-flower-1{
@@ -149,6 +168,12 @@ canvas{
         transform: rotate(25deg) scaleX(-1) translateX(-9rem);
         z-index: 2;
         margin-top:30rem;
+    }
+    .animacion-1{
+        margin-top: -3rem;
+    }
+    .animacion-2{
+        margin-top: -17rem;
     }
 }
 
@@ -162,7 +187,7 @@ canvas{
         opacity: 90%;
         transform: rotate(25deg) scaleX(-1) translateX(-9rem);
         z-index: 2;
-        margin-top:30rem;
+        margin-top:20rem;
     }
 }
 
