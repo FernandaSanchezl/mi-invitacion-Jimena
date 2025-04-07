@@ -41,6 +41,8 @@ canvas{
     margin-left: -1rem;
 }
 
+
+
 .confetti {
     position: absolute;
     top: 0;
@@ -74,7 +76,7 @@ canvas{
 #contador {
     font-family: "Urbanist", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; 
+    font-weight: 50; 
     font-style: normal;
     font-size: 1.2rem;
     color: #fff;
