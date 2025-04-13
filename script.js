@@ -59,18 +59,21 @@ setTimeout(() => {
 }, 10000);
 
 
+
   document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".fade-in");
+    const textElement = document.getElementById("text");
 
-    const showOnScroll = () => {
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 1000) {
-          el.classList.add("visible");
-        }
-      });
-    };
+    // Empieza la animación de la máquina de escribir al cargar la página
+    setTimeout(() => {
+      textElement.style.animationPlayState = "running";
+    }, 1000); // Esto espera 1 segundo antes de iniciar
 
-    window.addEventListener("scroll", showOnScroll);
-    showOnScroll(); // también verifica al cargar
+    // Si quieres que empiece cuando hagas scroll, usa esto:
+    // const onScroll = () => {
+    //   const rect = textElement.getBoundingClientRect();
+    //   if (rect.top < window.innerHeight - 100) {
+    //     textElement.style.animationPlayState = "running";
+    //   }
+    // };
+    // window.addEventListener("scroll", onScroll);
   });
