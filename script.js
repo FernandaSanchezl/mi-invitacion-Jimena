@@ -77,3 +77,22 @@ setTimeout(() => {
     // };
     // window.addEventListener("scroll", onScroll);
   });
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in-text");
+
+    const onScroll = () => {
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // Para que se ejecute al cargar la página
+  });
+
