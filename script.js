@@ -57,3 +57,20 @@ setTimeout(() => {
     let confettiElements = document.querySelectorAll(".confetti");
     confettiElements.forEach(el => el.parentNode.removeChild(el));
 }, 10000);
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    const showOnScroll = () => {
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 1000) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", showOnScroll);
+    showOnScroll(); // también verifica al cargar
+  });

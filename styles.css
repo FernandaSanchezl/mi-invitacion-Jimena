@@ -104,7 +104,15 @@ canvas{
     margin-top: 5px;
     text-transform: uppercase;
 }
-
+#horas{
+    color: #77779D;
+}
+#minutos{
+    color: #77779D;
+}
+#segundos{
+   color: #77779D;
+}
 #contenedor3D{
     position: fixed;
     inset: 0;
@@ -112,7 +120,17 @@ canvas{
     pointer-events: none;
 }
 
-
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 
 @keyframes fall {
     0% {

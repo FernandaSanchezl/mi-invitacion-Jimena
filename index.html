@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     
@@ -15,7 +17,7 @@
         
         <img  class="imag-flower-1" src="imagenes/flor.webp" alt="flor">
         <div class="container">
-            <h1 style="margin-bottom: 2rem; margin-top: -7rem;">Mi Cumpleaños Jimena</h1>
+            <h1 style="margin-bottom: 2rem; margin-top: -7rem;" >Mi Cumpleaños Jimena</h1>
             <h1 style="margin-bottom: 4rem;">¡Estás Invitado!</h1>
 
             <div class="container">
@@ -39,11 +41,11 @@
 
             <img class="imag-flower-2" src="imagenes/flor.webp" alt="flor">
             <div  id="contador">
-                <p>Faltan</p>
-                <span id="dias"></span> días,
-                <span id="horas"></span>:
-                <span id="minutos"></span>:
-                <span id="segundos"></span>.
+                <p>Faltan.</p>Días:
+                <span id="dias"></span> 
+                <span id="horas"></span>
+                <span id="minutos"></span>
+                <span id="segundos"></span>
             </div>
             
     <div  id="container3D">
@@ -68,9 +70,12 @@
 ></model-viewer>
 
     <footer>
-        <p style="font-size: 13px; margin-top: 20rem;">© 2025 Hecho por Fum Company</p>
+        <p  style="font-size: 13px; margin-top: 20rem;">© 2025 Hecho por Fum Company</p>
     </footer>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 
 
     <script src="script.js" type="module"></script>
