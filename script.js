@@ -96,3 +96,57 @@ setTimeout(() => {
     onScroll(); // Para que se ejecute al cargar la página
   });
 
+
+
+
+  const emojis = ["🎈", "🎉", "🍰", "🎁", "🎂", "💌", "🌟", "🍬"];
+  const cartas = [...emojis, ...emojis].sort(() => 0.5 - Math.random());
+  const juego = document.getElementById("juego");
+  const mensaje = document.getElementById("mensaje");
+
+  let seleccionadas = [];
+  let bloqueado = false;
+
+  cartas.forEach((icono, index) => {
+    const div = document.createElement("div");
+    div.classList.add("carta");
+    div.dataset.icono = icono;
+    div.dataset.index = index;
+    div.textContent = "";
+    juego.appendChild(div);
+  });
+
+  juego.addEventListener("click", (e) => {
+    const carta = e.target;
+    if (
+      !carta.classList.contains("carta") ||
+      carta.classList.contains("volteada") ||
+      bloqueado
+    ) return;
+
+    carta.textContent = carta.dataset.icono;
+    carta.classList.add("volteada");
+    seleccionadas.push(carta);
+
+    if (seleccionadas.length === 2) {
+      bloqueado = true;
+      const [a, b] = seleccionadas;
+      if (a.dataset.icono === b.dataset.icono) {
+        seleccionadas = [];
+        bloqueado = false;
+        // Revisar si todas las cartas están descubiertas
+        if (document.querySelectorAll(".volteada").length === cartas.length) {
+          mensaje.textContent = "¡Felicidades, encontraste todas las parejas!";
+        }
+      } else {
+        setTimeout(() => {
+          a.classList.remove("volteada");
+          b.classList.remove("volteada");
+          a.textContent = "";
+          b.textContent = "";
+          seleccionadas = [];
+          bloqueado = false;
+        }, 800);
+      }
+    }
+  });

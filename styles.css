@@ -98,6 +98,7 @@ canvas{
     font-size: 1.2rem;
     color: #fff;
     margin-top: -10rem;
+    margin-bottom: 10rem;
 }
 
 #contador span::after {
@@ -123,6 +124,39 @@ canvas{
     z-index: 100;
     pointer-events: none;
 }
+
+
+#juego {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .carta {
+    width: 70px;
+    height: 70px;
+    background: #782f8f91;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .carta.volteada {
+    background: #ffffff8b;
+  }
+
+  #mensaje {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+
 
 #text {
     font-size: 30px;
@@ -183,7 +217,7 @@ canvas{
 
 @media (max-width:412px) {
     canvas{
-        margin-top: -75rem;
+        margin-top: -95rem;
         margin-left: -1rem;
     }
     .imag-flower-1{
@@ -191,13 +225,16 @@ canvas{
         opacity: 90%;
         transform: rotate(25deg) scaleX(-1) translateX(-9rem);
         z-index: 2;
-        margin-top:10rem;
+        margin-top:25rem;
     }
     .animacion-1{
         margin-top: -9rem;
     }
     .animacion-2{
-        margin-top: -20rem;
+        margin-top: -18rem;
+    }
+    #contador {
+        margin-bottom: 30rem;
     }
 }
 
@@ -207,7 +244,17 @@ canvas{
         margin-left: -1rem;
     }
 }
-
+@media (max-width:390px) {
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        margin-top:30rem;
+    }
+    #contador {
+        margin-bottom: 5rem;
+    }
+}
 @media (max-width:375px) {
     canvas{
         margin-top: -67rem;
@@ -217,14 +264,34 @@ canvas{
         width: 90%;
         opacity: 90%;
         transform: rotate(25deg) scaleX(-1) translateX(-9rem);
-        z-index: 2;
-        margin-top:30rem;
+    
     }
     .animacion-1{
         margin-top: -3rem;
     }
     .animacion-2{
         margin-top: -17rem;
+    }
+    #contador {
+        margin-bottom: 10rem;
+    }
+}
+
+@media (max-width:375px) {
+    canvas{
+        margin-top: -70rem;
+        margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:40rem;
+    }
+
+    .maps{
+        align-items: center;
     }
 }
 
@@ -238,7 +305,11 @@ canvas{
         opacity: 90%;
         transform: rotate(25deg) scaleX(-1) translateX(-9rem);
         z-index: 2;
-        margin-top:20rem;
+        margin-top:40rem;
+    }
+
+    .maps{
+        align-items: center;
     }
 }
 
@@ -259,7 +330,10 @@ canvas{
         opacity: 90%;
         transform: rotate(25deg) scaleX(-1) translateX(-9rem);
         z-index: 2;
-        margin-top:20rem;
+        margin-top:35rem;
+    }
+    #contador {
+        margin-bottom: 2rem;
     }
 }
 

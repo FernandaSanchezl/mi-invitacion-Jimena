@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Memoria</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fce4ec;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d81b60;
+    }
+
+    #juego {
+      display: grid;
+      grid-template-columns: repeat(4, 70px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .carta {
+      width: 70px;
+      height: 70px;
+      background: #f8bbd0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .carta.volteada {
+      background: #fff;
+    }
+
+    #mensaje {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎉 Juego de Memoria</h1>
+<div id="juego"></div>
+<div id="mensaje"></div>
+
+<script>
+  const emojis = ["🎈", "🎉", "🍰", "🎁", "🎀", "💌", "🌟", "🍬"];
+  const cartas = [...emojis, ...emojis].sort(() => 0.5 - Math.random());
+  const juego = document.getElementById("juego");
+  const mensaje = document.getElementById("mensaje");
+
+  let seleccionadas = [];
+  let bloqueado = false;
+
+  cartas.forEach((icono, index) => {
+    const div = document.createElement("div");
+    div.classList.add("carta");
+    div.dataset.icono = icono;
+    div.dataset.index = index;
+    div.textContent = "";
+    juego.appendChild(div);
+  });
+
+  juego.addEventListener("click", (e) => {
+    const carta = e.target;
+    if (
+      !carta.classList.contains("carta") ||
+      carta.classList.contains("volteada") ||
+      bloqueado
+    ) return;
+
+    carta.textContent = carta.dataset.icono;
+    carta.classList.add("volteada");
+    seleccionadas.push(carta);
+
+    if (seleccionadas.length === 2) {
+      bloqueado = true;
+      const [a, b] = seleccionadas;
+      if (a.dataset.icono === b.dataset.icono) {
+        seleccionadas = [];
+        bloqueado = false;
+        // Revisar si todas las cartas están descubiertas
+        if (document.querySelectorAll(".volteada").length === cartas.length) {
+          mensaje.textContent = "¡Felicidades, encontraste todas las parejas! 🎊";
+        }
+      } else {
+        setTimeout(() => {
+          a.classList.remove("volteada");
+          b.classList.remove("volteada");
+          a.textContent = "";
+          b.textContent = "";
+          seleccionadas = [];
+          bloqueado = false;
+        }, 800);
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
