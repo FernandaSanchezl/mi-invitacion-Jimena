@@ -215,6 +215,29 @@ canvas{
     }
 }
 
+@media (min-width:400px) and (max-width:600px) {
+    canvas{
+        margin-top: -95rem;
+        margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:25rem;
+    }
+    .animacion-1{
+        margin-top: -9rem;
+    }
+    .animacion-2{
+        margin-top: -18rem;
+    }
+    #contador {
+        margin-bottom: 40rem;
+    }
+}
+
 @media (max-width:412px) {
     canvas{
         margin-top: -95rem;
@@ -255,6 +278,30 @@ canvas{
         margin-bottom: 5rem;
     }
 }
+
+@media (min-width:370px) and (max-width:1000px) {
+    canvas{
+        margin-top: -95rem;
+        margin-left: -1rem;
+    }
+    .imag-flower-1{
+        width: 90%;
+        opacity: 90%;
+        transform: rotate(25deg) scaleX(-1) translateX(-9rem);
+        z-index: 2;
+        margin-top:25rem;
+    }
+    .animacion-1{
+        margin-top: -9rem;
+    }
+    .animacion-2{
+        margin-top: -18rem;
+    }
+    #contador {
+        margin-bottom: 40rem;
+    }
+}
+
 @media (max-width:375px) {
     canvas{
         margin-top: -67rem;
